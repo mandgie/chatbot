@@ -11,4 +11,4 @@ RUN pip install -r requirements.txt
 RUN python load_model.py
 
 # to be equal to the cores available.
-CMD exec gunicorn --bind :$PORT --workers 1 --threads 4 app:app
+CMD exec gunicorn --bind :$PORT --workers 2 --threads 4 app:app
