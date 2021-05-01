@@ -1,10 +1,10 @@
-from transformers import BlenderbotTokenizer, BlenderbotForConditionalGeneration
+from transformers import BlenderbotSmallTokenizer, BlenderbotSmallForConditionalGeneration
 
 class ChatModel:
     def __init__(self):
         """Initialize model and tokenizer."""
-        self.model = BlenderbotForConditionalGeneration.from_pretrained('./model')
-        self.tokenizer = BlenderbotTokenizer.from_pretrained('./model')
+        self.model = BlenderbotSmallForConditionalGeneration.from_pretrained('./model')
+        self.tokenizer = BlenderbotSmallTokenizer.from_pretrained('./model')
 
     def get_reply(self, user_query):
         """Given user input, make bot prediction.

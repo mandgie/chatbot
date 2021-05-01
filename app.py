@@ -23,6 +23,7 @@ def query():
     """Endpoint for receiving bot response"""
     query = request.json
     conversations = query['lastConversations']
+    # Get dialog in format according to documentation
     input_data = '    '.join(conversations)
     bot_answer = clf.get_reply(input_data)
     return json.dumps({'botResponse': bot_answer})
